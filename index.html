@@ -127,12 +127,135 @@
             font-size: 1.2em;
             color: white;
         }
+
+        @media (max-width: 768px) {
+            .image-container img {
+                max-width: 100%;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+        }
+        form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background: linear-gradient(45deg, #004a99, #ffdd57);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(45deg, #ffdd57, #004a99);
+}
+
+section#contacto {
+    text-align: center;
+    padding: 40px 20px;
+    color: #333;
+}
+#aviso-legal {
+    background: #004a99; /* Fondo azul oscuro */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#aviso-legal h2 {
+    color: #ffdd57; /* Color dorado */
+    margin-bottom: 15px;
+}
+
+#aviso-legal a {
+    color: #ffdd57; /* Color dorado */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#aviso-legal a:hover {
+    text-decoration: underline;
+}
+#avisos {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#avisos h2 {
+    text-align: center;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+.avisos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.aviso {
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+}
+
+.aviso img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.aviso p {
+    font-size: 1em;
+    color: #333;
+}
+
+
+
     </style>
 </head>
 <body>
     <div class="header-background">
         <h1>Santuario Mariano Virgen de los Ángeles</h1>
-        <p>Un lugar de fe y devoción en Costa Rica</p>
+        <p>Un lugar de fe y devoción en Guanacaste , Santa Cruz , Cartagena ,Costa Rica</p>
     </div>
     <nav>
         <a href="#lecturas">Lecturas</a>
@@ -143,18 +266,59 @@
         <a href="#costarica">Costa Rica</a>
         <a href="#santuario">Santuario</a>
         <a href="#ubicacion">Ubicación</a>
+        
     </nav>
     <main>
         <section id="anuncios">
             <h2>Maria Madre de Dios</h2>
             <div class="image-container">
-                <img src="./imagenes/virgen.png" alt="Imagen de la Virgen de los Ángeles">
                 <img src="./imagenes/escudo.jpg" alt="Escudo del Santuario">
             </div>
             <div class="button-container">
                 <a href="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i> Visítanos en Facebook para ver los anuncios</a>
             </div>
         </section>
+
+        <section id="horario-misas">
+            <h2>Horario de las Misas</h2>
+            <div class="image-container">
+                <img src="./imagenes/horario-misas.jpg" alt="Horario de las Misas">
+            </div>
+            <section id="avisos">
+                <h2>Avisos Importantes</h2>
+                <div class="avisos-container">
+                    <!-- Aviso 1 -->
+                    <div class="aviso">
+                        <img src="./imagenes/aviso1.jpg" alt="Aviso 1">
+                        <h3>Misa Especial</h3>
+                        <p>Ven a la misa especial este domingo a las 10:00 AM en el Santuario.</p>
+                        <a href="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL" target="_blank" class="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL">Ver más</a>
+                    </div>
+                    <!-- Aviso 2 -->
+                    <div class="aviso">
+                        <img src="./imagenes/aviso2.jpg" alt="Aviso 2">
+                        <h3>Procesión Mariana</h3>
+                        <p>Únete a nuestra procesión mariana el próximo sábado a las 6:00 PM.</p>
+                        <a href="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL" target="_blank" class="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL">Ver más</a>
+                    </div>
+                    <!-- Aviso 3 -->
+                    <div class="aviso">
+                        <img src="./imagenes/aviso3.jpg" alt="Aviso 3">
+                        <h3>Campaña de Donación</h3>
+                        <p>Apoya nuestra campaña de donación para familias necesitadas.</p>
+                        <a href="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL" target="_blank" class="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL">Ver más</a>
+                    </div>
+                    <!-- Aviso 4 -->
+                    <div class="aviso">
+                        <img src="./imagenes/aviso4.jpg" alt="Aviso 4">
+                        <h3>Concierto Navideño</h3>
+                        <p>Disfruta de nuestro concierto navideño el próximo viernes a las 7:00 PM.</p>
+                        <a href="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL" target="_blank" class="https://www.facebook.com/parroquiasantuario.cartagena?mibextid=ZbWKwL">Ver más</a>
+                    </div>
+                </div>
+            </section>
+            
+        
 
         <section id="lecturas">
             <h2>Lecturas del Día</h2>
@@ -166,7 +330,7 @@
 
         <section id="italia">
             <h2>Italia</h2>
-            <p>Scopri le letture del giorno al convegno italiano.</p>
+            <p style="text-align: center;">Scopri le letture del giorno al convegno italiano.</p>
             <div class="button-container">
                 <a href="https://www.chiesacattolica.it/liturgia-del-giorno/" target="_blank">Vedi Lettura</a>
             </div>
@@ -174,7 +338,7 @@
 
         <section id="eeuu">
             <h2>EE.UU.</h2>
-            <p>Check out the readings of the day in the American conference.</p>
+            <p style="text-align: center;">Check out the readings of the day in the American conference.</p>
             <div class="button-container">
                 <a href="https://bible.usccb.org/daily-bible-reading" target="_blank">See Reading</a>
             </div>
@@ -182,7 +346,7 @@
 
         <section id="francia">
             <h2>Francia</h2>
-            <p>Découvrez les lectures du jour au colloque français.</p>
+            <p style="text-align: center;">Découvrez les lectures du jour au colloque français.</p>
             <div class="button-container">
                 <a href="https://eglise.catholique.fr/approfondir-sa-foi/la-celebration-de-la-foi/le-dimanche-jour-du-seigneur/" target="_blank">Voir Lecture</a>
             </div>
@@ -190,7 +354,7 @@
 
         <section id="alemania">
             <h2>Alemania</h2>
-            <p>Schauen Sie sich die Tageslesungen der deutschen Konferenz an.</p>
+            <p style="text-align: center;">Schauen Sie sich die Tageslesungen der deutschen Konferenz an.</p>
             <div class="button-container">
                 <a href="https://www.katholisch.de/stundenbuch" target="_blank">Siehe Lesen</a>
             </div>
@@ -214,10 +378,9 @@
                 <img src="./imagenes/igle1.jpg" alt="Sacerdotes del Santuario Mariano">
             </div>
 
-
         <section id="ubicacion">
             <h2>Ubicación del Santuario</h2>
-            <p>Encuentra el Santuario Mariano Virgen de los Ángeles en Cartagena, Guanacaste, Costa Rica:</p>
+            <p style="text-align: center;">Encuentra el Santuario Mariano Virgen de los Ángeles en Cartagena, Guanacaste, Costa Rica:</p>
             <div style="text-align: center;">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.209871012247!2d-85.544592!3d10.3503197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9ec47b607dc09d%3A0x54ff441cfb5c70b!2sSantuario%20Mariano%20Virgen%20de%20los%20%C3%81ngeles!5e0!3m2!1ses!2scr!4v1683643947385!5m2!1ses!2scr" 
@@ -230,9 +393,62 @@
                 </iframe>
             </div>
         </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Envíanos tus preguntas, comentarios o peticiones especiales a través del formulario a continuación:</p>
+            <form action="https://formspree.io/f/xovvybew" method="post" onsubmit="handleSubmit(event)">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <script>
+            function handleSubmit(event) {
+                event.preventDefault(); // Evita el comportamiento por defecto del formulario
+                const form = event.target;
+                fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(() => {
+                    alert('Formulario enviado con éxito.');
+                    window.location.href = 'https://www.virgendelosangelescg.com/'; // Redirige a la página principal
+                }).catch(() => {
+                    alert('Ocurrió un error al enviar el formulario.');
+                });
+            }
+        </script>
+        
+        
+        
+        </section>
+        <section id="aviso-legal">
+            <h2>Aviso Legal</h2>
+            <p>Este sitio web tiene como objetivo brindar información sobre el Santuario Mariano Virgen de los Ángeles, su historia, lecturas y avisos. Toda la información proporcionada es únicamente con fines informativos y no representa ningún compromiso legal.</p>
+
+        </section>
+
     </main>
     <footer>
-        <p>&copy; 2025 Santuario Mariano
+        <p>&copy; 2025 Santuario Mariano Virgen de los Ángeles</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div style="margin-top: 20px; text-align: center; font-size: 0.9em; color: #ccc;">
+            <p>Página desarrollada por <strong>Sistemas03IL</strong>. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:mjimenez@sistemas03il.com" style="color: #ffdd57;">mjimenez@sistemas03il.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
 
 
 
